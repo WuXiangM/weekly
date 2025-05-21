@@ -8,6 +8,8 @@ on:
 jobs:
   sync:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write  # 允许写入代码，确保GITHUB_TOKEN有推送权限
     steps:
       - name: Checkout
         uses: actions/checkout@v4
