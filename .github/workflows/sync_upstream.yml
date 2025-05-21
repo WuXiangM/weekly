@@ -1,0 +1,37 @@
+name: Sync upstream
+
+on:
+  schedule:
+    - cron: '0 8 * * *'  # 每天UTC时间2点执行一次，可根据需要调整
+  workflow_dispatch:      # 允许手动触发
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Git
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Add upstream remote
+        run: git remote add upstream https://github.com/ruanyf/weekly.git
+
+      - name: Fetch upstream changes
+        run: git fetch upstream
+
+      - name: Merge upstream/main into main
+        run: |
+          git checkout main
+          git merge upstream/main --allow-unrelated-histories || true
+
+      - name: Push changes
+        run: |
+          git push origin main
+        env:
+          # 需要有 repo 权限的 PAT，可存在项目的 Secrets 中，如：ACTIONS_DEPLOY_KEY
+          # GITHUB_TOKEN 也可用，但可能有权限限制
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
