@@ -4,7 +4,7 @@
 
 欢迎投稿，推荐或自荐文章/软件/资源，请[提交 issue](https://github.com/ruanyf/weekly/issues) 。
 
-> P.S. 讨论区的[《谁在招人》](https://github.com/ruanyf/weekly/issues/6771)，是一个免费的程序员招聘帖，提供大量就业信息，欢迎访问或发布工作/实习岗位。
+> P.S. 讨论区的[《谁在招人》](https://github.com/ruanyf/weekly/issues/6965)，是一个免费的程序员招聘帖，提供大量就业信息，欢迎访问或发布工作/实习岗位。
 
 ## 如何搜索
 
@@ -28,8 +28,14 @@ $ grep -nri css docs | cat --number
 
 ## 2025
 
+**六月**
+
+- 第 351 期：[GitHub Issues（几乎）是最好的笔记应用](docs/issue-351.md)
+
 **五月**
 
+- 第 350 期：[Java 三十周年](docs/issue-350.md)
+- 第 349 期：[神经网络算法的发明者](docs/issue-349.md)
 - 第 348 期：[李飞飞，从移民到 AI 明星](docs/issue-348.md)
 - 第 347 期：[冷启动的破解之道](docs/issue-347.md)
 
