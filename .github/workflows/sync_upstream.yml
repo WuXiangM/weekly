@@ -29,15 +29,13 @@ jobs:
         run: |
           git checkout news
           # git merge upstream/master --allow-unrelated-histories || true
-          git merge upstream/master || true
-          git checkout --theirs .
+          git merge upstream/master --allow-unrelated-histories -X theirs || true
           git add .
           git commit -m "auto-resolve conflict using upstream (theirs)" || true
-          git push origin news
-
+          
       - name: Push changes
         run: |
-          git push origin news
+          git push origin news --force
         env:
           # 需要有 repo 权限的 PAT，可存在项目的 Secrets 中，如：ACTIONS_DEPLOY_KEY
           # GITHUB_TOKEN 也可用，但可能有权限限制
