@@ -28,7 +28,7 @@ jobs:
       - name: Merge upstream/news into news
         run: |
           git checkout news
-          git merge upstream/news --allow-unrelated-histories || true
+          git merge upstream/master --allow-unrelated-histories || true
 
       - name: Push changes
         run: |
