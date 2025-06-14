@@ -28,7 +28,12 @@ jobs:
       - name: Merge upstream/news into news
         run: |
           git checkout news
-          git merge upstream/master --allow-unrelated-histories || true
+          # git merge upstream/master --allow-unrelated-histories || true
+          git merge upstream/master || true
+          git checkout --theirs .
+          git add .
+          git commit -m "auto-resolve conflict using upstream (theirs)" || true
+          git push origin news
 
       - name: Push changes
         run: |
