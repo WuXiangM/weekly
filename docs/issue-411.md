@@ -258,7 +258,7 @@ Go 语言编写的 Z-Library 图书馆命令行工具。（[@heartleo](https://g
 
 ![](https://cdn.beekka.com/blogimg/asset/202609/bg2026090206.webp)
 
-这个网站选取美国多个真实的家庭卫生间，进行 3D 建模。你可以在网页上360度浏览这些卫生间的模型。
+这个网站选取美国多个真实的公共卫生间，进行 3D 建模。你可以在网页上360度浏览这些卫生间的模型。
 
 ![](https://cdn.beekka.com/blogimg/asset/202609/bg2026090207.webp)
 
